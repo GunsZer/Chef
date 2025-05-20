@@ -31,7 +31,7 @@ const Contact = () => {
             Contactez-nous
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Une question ? Une suggestion ? N'hésitez pas à nous contacter !
+            Une question ? Une suggestion ? N&apos;hésitez pas à nous contacter !
           </p>
         </div>
 

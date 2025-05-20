@@ -39,7 +39,7 @@ const About = () => {
               Notre Histoire
             </h2>
             <p className="text-lg mb-8 text-gray-600">
-              Depuis 2015, Chef Falafel s'engage à servir les meilleurs falafels végétariens
+              Depuis 2015, Chef Falafel s&apos;engage à servir les meilleurs falafels végétariens
               de la ville. Notre passion pour la cuisine végétarienne et notre respect
               des traditions culinaires nous permettent de créer des plats savoureux
               et authentiques.

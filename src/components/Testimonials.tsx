@@ -8,7 +8,7 @@ const Testimonials = () => {
       name: 'Sophie Martin',
       avatar: '/testimonials/avatar-1.jpg',
       rating: 5,
-      comment: "Les meilleurs falafels que j'ai jamais mangés ! Frais, croustillants et tellement savoureux.",
+      comment: "Les meilleurs falafels que j&apos;ai jamais mangés ! Frais, croustillants et tellement savoureux.",
       date: '2024-03-15',
     },
     {
@@ -83,7 +83,7 @@ const Testimonials = () => {
                 </div>
               </div>
               <p className="text-gray-600 text-lg italic mb-4">
-                "{testimonials[currentIndex].comment}"
+                &quot;{testimonials[currentIndex].comment}&quot;
               </p>
               <p className="text-gray-500 text-sm">
                 {new Date(testimonials[currentIndex].date).toLocaleDateString('fr-FR', {
