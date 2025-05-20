@@ -1,6 +1,16 @@
-# La Cité Suchard - Site Web
+# Chef Falafel - Site Vitrine
 
-Site web de la Cité Suchard, un espace culturel unique à Neuchâtel.
+Un site vitrine moderne et responsive pour un restaurant de street food végétarienne, développé avec Next.js et Tailwind CSS.
+
+## Fonctionnalités
+
+- Design moderne et responsive
+- Animations fluides
+- Galerie d'images interactive
+- Formulaire de contact
+- Section témoignages clients
+- Menu interactif
+- Optimisé pour les performances
 
 ## Technologies utilisées
 
@@ -8,93 +18,106 @@ Site web de la Cité Suchard, un espace culturel unique à Neuchâtel.
 - React
 - TypeScript
 - Tailwind CSS
-- Framer Motion
-- Nodemailer
+- Framer Motion (pour les animations)
 
 ## Prérequis
 
-- Node.js 18 ou supérieur
+- Node.js 14.x ou supérieur
 - npm ou yarn
 
 ## Installation
 
-1. Cloner le repository :
+1. Clonez le dépôt :
 ```bash
-git clone [URL_DU_REPO]
-cd cite-suchard
+git clone https://github.com/votre-username/chef-falafel.git
+cd chef-falafel
 ```
 
-2. Installer les dépendances :
+2. Installez les dépendances :
 ```bash
 npm install
+# ou
+yarn install
 ```
 
-3. Créer un fichier `.env.local` à la racine du projet avec les variables suivantes :
-```
-CONTACT_EMAIL_USER=votre_email@gmail.com
-CONTACT_EMAIL_PASS=votre_mot_de_passe
-CONTACT_EMAIL_TO=destinataire@exemple.com
+3. Créez un fichier `.env.local` à la racine du projet et ajoutez vos variables d'environnement :
+```env
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=votre_clé_api
 ```
 
 ## Développement
 
-Lancer le serveur de développement :
+Pour lancer le serveur de développement :
+
 ```bash
 npm run dev
+# ou
+yarn dev
 ```
 
-Le site sera accessible à l'adresse [http://localhost:3000](http://localhost:3000)
+Le site sera accessible à l'adresse [http://localhost:3000](http://localhost:3000).
 
-## Optimisation des images
+## Production
 
-Pour optimiser les images :
-```bash
-npm run optimize-images
-```
+Pour construire l'application pour la production :
 
-## Tests
-
-Lancer les tests :
-```bash
-npm test
-```
-
-## Build et déploiement
-
-1. Construire le projet :
 ```bash
 npm run build
+# ou
+yarn build
 ```
 
-2. Lancer le serveur de production :
+Pour démarrer le serveur de production :
+
 ```bash
-npm start
+npm run start
+# ou
+yarn start
 ```
 
 ## Structure du projet
 
 ```
-cite-suchard/
-├── public/
-│   └── images/
-│       ├── gallery/
-│       └── events/
+chef-falafel/
+├── public/              # Fichiers statiques
 ├── src/
-│   ├── components/
-│   ├── pages/
-│   └── styles/
-├── scripts/
-└── tests/
+│   ├── components/      # Composants React
+│   ├── pages/          # Pages Next.js
+│   ├── styles/         # Styles globaux
+│   └── utils/          # Utilitaires
+├── .env.local          # Variables d'environnement
+├── next.config.js      # Configuration Next.js
+├── tailwind.config.js  # Configuration Tailwind
+└── package.json        # Dépendances
 ```
 
-## Déploiement
+## Personnalisation
 
-Le site peut être déployé sur :
-- Vercel (recommandé pour Next.js)
-- Netlify
-- AWS Amplify
-- Tout autre service supportant Next.js
+### Couleurs
+
+Les couleurs principales sont définies dans `src/styles/globals.css` :
+
+```css
+:root {
+  --color-primary: #2C5530;    /* Vert foncé */
+  --color-secondary: #D4A017;  /* Jaune moutarde */
+  --color-accent: #8B4513;     /* Brun terreux */
+}
+```
+
+### Images
+
+Placez vos images dans le dossier `public/` :
+- `public/logo.png` : Logo du restaurant
+- `public/hero-falafel.jpg` : Image principale
+- `public/menu/` : Images des plats
+- `public/gallery/` : Images de la galerie
+- `public/testimonials/` : Photos des clients
+
+## Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou à soumettre une pull request.
 
 ## Licence
 
-[Votre licence] 
+Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails. 
