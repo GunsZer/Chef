@@ -16,38 +16,75 @@
   }
 
   body {
-    @apply bg-white text-gray-800 font-sans;
+    @apply bg-white text-gray-800 font-sans antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold;
+    @apply font-bold tracking-tight;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-[var(--color-primary)] text-white px-6 py-3 rounded-lg 
+    @apply bg-[var(--color-primary)] text-white px-6 py-3 rounded-full
            hover:bg-opacity-90 transition-all duration-300 
-           transform hover:scale-105;
+           transform hover:scale-105 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:ring-opacity-50;
+  }
+
+  .btn-secondary {
+    @apply bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-full
+           hover:bg-white/20 transition-all duration-300
+           transform hover:scale-105 hover:shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50;
   }
 
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-32;
   }
 
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm hover:shadow-md
+           transition-all duration-300 transform hover:-translate-y-1;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200
+           focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent
+           transition-all duration-300;
   }
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {
-  animation: fadeIn 1s ease-in;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-delay-600 {
+  animation-delay: 600ms;
 }
 
 /* Transitions */
@@ -55,4 +92,22 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
 } 
